@@ -24,6 +24,7 @@ public class Program
         IConfig config = DefaultConfig.Instance.AddJob(job);
         BenchmarkRunner.Run(typeof(StringConcatBenchmarks), config);
         BenchmarkRunner.Run(typeof(ForeachBenchmarks), config);
+        BenchmarkRunner.Run(typeof(ForeachRemoveFirstBenchmarks), config);
     }
 
     private static int? GetIntArg(string[] args, string name)
