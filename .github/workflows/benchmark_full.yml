@@ -43,10 +43,13 @@ jobs:
           cache: 'npm'
           cache-dependency-path: EgoParadise.CsBenchmarks.Frontend/package.json
       - name: Build site with VitePress
+        env:
+          # https://vitepress.dev/guide/deploy#github-pages
+          VITEPRESS_BASE: /${{ github.event.repository.name }}/
         run: |
           cd EgoParadise.CsBenchmarks.Frontend
           npm i --no-fund --no-audit --prefer-offline
-          VITEPRESS_BASE="${{ steps.pages.outputs.base_path }}" npm run site
+          npm run site
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
