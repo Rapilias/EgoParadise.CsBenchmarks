@@ -9,4 +9,5 @@ obj/
 *.rsuser
 
 .idea/
+.vitepress/
 BenchmarkDotNet.Artifacts/
