@@ -1,0 +1,24 @@
+:root{
+  --vp-layout-max-width: 1800px;
+  --vp-doc-content-width: 1200px;
+  --vp-sidebar-width: 260px;
+}
+
+.VPContent .container{ max-width: var(--vp-layout-max-width) !important; }
+.VPDoc .container{ max-width: var(--vp-layout-max-width) !important; }
+.VPDoc .content{ max-width: 100% !important; flex: 1 1 auto; }
+.VPDoc .content .content-container{ max-width: 100% !important; }
+.VPDoc .main{ max-width: 100% !important; }
+.VPDoc .vp-doc{ max-width: 100% !important; }
+.VPDoc.has-aside .content{ max-width: calc(100% - var(--vp-sidebar-width)) !important; }
+
+table{ table-layout: auto; }
+td, th{ white-space: nowrap; }
+
+.shiki{ overflow:auto; padding:1rem; border-radius:8px; }
+.shiki code{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 13px; }
+
+.shiki{ overflow:auto; padding:1rem; border-radius:8px; }
+.shiki code{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+
+
