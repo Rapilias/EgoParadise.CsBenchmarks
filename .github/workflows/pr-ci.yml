@@ -21,26 +21,3 @@ jobs:
         run: dotnet restore
       - name: Build (Release)
         run: dotnet build -c Release --no-restore
-
-  quick-benchmark:
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
-      - name: Run quick benchmark
-        run: |
-          dotnet run --project EgoParadise.CsBenchmarks -c Release -- --warmupCount 1 --iterationCount 3 --launchCount 1
-      - name: Upload results (if any)
-        uses: actions/upload-artifact@v4
-        with:
-          name: quick-benchmark-results
-          path: BenchmarkDotNet.Artifacts/results/
-          if-no-files-found: ignore
-
-
