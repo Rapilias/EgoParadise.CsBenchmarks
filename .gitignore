@@ -1,0 +1,13 @@
+bin/
+obj/
+!bin/Generated/
+
+.vs/
+*.user
+*.userprefs
+*.suo
+*.rsuser
+
+.idea/
+.vitepress/
+BenchmarkDotNet.Artifacts/

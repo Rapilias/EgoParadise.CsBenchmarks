@@ -1,0 +1,23 @@
+{
+  "name": "ego-paradise-csbenchmarks-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run ingest && npm run gen:pages && vitepress dev .",
+    "build": "vitepress build .",
+    "preview": "vitepress preview .",
+    "ingest": "tsx scripts/ingest-bdn.ts",
+    "gen:pages": "tsx scripts/gen-pages.ts",
+    "site": "npm run ingest && npm run gen:pages && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "chart.js": "^4.5.1",
+    "npm-check-updates": "^19.1.1",
+    "shiki": "^3.14.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitepress": "^2.0.0-alpha.12"
+  }
+}
