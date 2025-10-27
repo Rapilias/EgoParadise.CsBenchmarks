@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "npm run ingest && npm run gen:pages && vitepress dev .",
+    "prebuild": "npm run ingest && npm run gen:pages",
     "build": "vitepress build .",
     "preview": "vitepress preview .",
     "ingest": "tsx scripts/ingest-bdn.ts",
