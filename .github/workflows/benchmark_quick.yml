@@ -1,0 +1,29 @@
+name: Benchmark Quick
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  quick:
+    name: Quick benchmark (lightweight)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Build
+        run: dotnet build -c Release
+      - name: Run quick benchmark
+        run: |
+          dotnet run --project EgoParadise.CsBenchmarks/EgoParadise.CsBenchmarks -c Release -- --warmupCount 1 --iterationCount 3 --launchCount 1
+      - name: Upload quick results
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-results-quick
+          path: BenchmarkDotNet.Artifacts/results/
+          if-no-files-found: warn
