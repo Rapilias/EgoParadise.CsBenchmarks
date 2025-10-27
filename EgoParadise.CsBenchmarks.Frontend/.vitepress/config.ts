@@ -14,6 +14,10 @@ export default defineConfig({
   description: 'BenchmarkDotNet 結果ビューア',
   lastUpdated: true,
   themeConfig: {
+    outline: {
+      level: [2, 3],
+      label: '目次',
+    },
     nav: [
       { text: 'ホーム', link: '/' },
     ],
