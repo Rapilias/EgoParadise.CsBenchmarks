@@ -5,3 +5,7 @@ public/data/
 package-lock.json
 
 
+entries/
+!entries/.gitkeep
+public/code
+!public/code/.gitkeep

@@ -14,6 +14,5 @@ dotnet run --project EgoParadise.CsBenchmarks -c Release -- --warmupCount 1 --it
 ```
 cd EgoParadise.CsBenchmarks.Frontend
 npm i
-npm run ingest   # BenchmarkDotNet の JSON を取り込み public/data に配置
 npm run dev      # http://localhost:5173 で閲覧
 ```
