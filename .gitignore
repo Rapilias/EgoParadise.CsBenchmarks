@@ -9,5 +9,6 @@ obj/
 *.rsuser
 
 .idea/
-.vitepress/
+.vitepress/cache
+.vitepress/dist
 BenchmarkDotNet.Artifacts/
