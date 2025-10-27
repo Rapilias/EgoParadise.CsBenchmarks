@@ -32,7 +32,7 @@ jobs:
         run: dotnet build -c Release
       - name: Run full benchmark
         run: |
-          dotnet run --project EgoParadise.CsBenchmarks/EgoParadise.CsBenchmarks -c Release
+          dotnet run --project EgoParadise.CsBenchmarks -c Release
       - name: Setup Node
         uses: actions/setup-node@v4
         with:

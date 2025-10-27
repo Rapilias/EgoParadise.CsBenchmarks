@@ -35,7 +35,7 @@ jobs:
           dotnet-version: '8.0.x'
       - name: Run quick benchmark
         run: |
-          dotnet run --project EgoParadise.CsBenchmarks/EgoParadise.CsBenchmarks -c Release -- --warmupCount 1 --iterationCount 3 --launchCount 1
+          dotnet run --project EgoParadise.CsBenchmarks -c Release -- --warmupCount 1 --iterationCount 3 --launchCount 1
       - name: Upload results (if any)
         uses: actions/upload-artifact@v4
         with:
